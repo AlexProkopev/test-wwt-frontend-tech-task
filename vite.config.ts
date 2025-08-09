@@ -34,5 +34,9 @@ export default defineConfig(() => ({
 		coverage: {
 			provider: 'istanbul'
 		}
+	},
+
+	optimizeDeps: {
+		include: ['void-elements']
 	}
 }))

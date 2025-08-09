@@ -1,10 +1,28 @@
+import { useAppLogic } from '@/hooks/useAppLogic'
+
+import FilterComponent from '../../../components/FilterComponent/FilterComponent'
+import SectionFilters from '../../../components/SectionFilters/sectionfilrets'
+import UniversalModal from '../../../components/UniversalModal/UniversalModal'
+
 export const App = () => {
+	const { t, i18n, isOpen, onClick, confirmedFilters, toggleLanguage } =
+		useAppLogic()
+
 	return (
-		<section className="w-full h-dvh flex items-center justify-center">
-			{/* eslint-disable-next-line i18next/no-literal-string */}
-			<h1 className="text-6xl text-gray-600 mb-12">
-				WinWinTravel frontend test task
-			</h1>
-		</section>
+		<>
+			<SectionFilters
+				currentLang={i18n.language}
+				toggleLanguage={toggleLanguage}
+				confirmedFilters={confirmedFilters}
+				t={t}
+				onClick={onClick}
+			/>
+
+			{isOpen && (
+				<UniversalModal onClose={onClick}>
+					<FilterComponent onClick={onClick} />
+				</UniversalModal>
+			)}
+		</>
 	)
 }
