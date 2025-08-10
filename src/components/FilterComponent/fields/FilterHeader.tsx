@@ -12,7 +12,7 @@ interface FilterHeaderProps {
 
 const FilterHeader: React.FC<FilterHeaderProps> = ({ title, onClose, t }) => (
 	<div className="relative">
-		<h2 className="text-center text-neutral-700 text-4xl font-medium font-['Inter']">
+		<h2 className="text-center text-neutral-700 text-4xl font-medium">
 			{title}
 		</h2>
 		<button

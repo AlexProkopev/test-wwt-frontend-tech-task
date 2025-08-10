@@ -44,10 +44,15 @@ export const useFilterLogic = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
-		setConfirmedFilters(draftFilters)
+		
 		if (draftFilters.length > 0) {
 			setIsOpen(true)
 		}
+	}
+
+	const handleConfirmApply = () => {
+		setConfirmedFilters(draftFilters)
+		setIsOpen(false)
 	}
 
 	const handleReset = () => {
@@ -63,6 +68,7 @@ export const useFilterLogic = () => {
 		setIsOpen,
 		toggleOption,
 		handleSubmit,
-		handleReset
+		handleReset,
+		handleConfirmApply
 	}
 }

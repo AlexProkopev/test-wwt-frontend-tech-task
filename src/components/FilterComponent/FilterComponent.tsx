@@ -9,7 +9,7 @@ interface FilterComponentProps {
 	onClick: () => void
 }
 
-const FilterComponent = ({ onClick }: FilterComponentProps) => {
+export const FilterComponent = ({ onClick }: FilterComponentProps) => {
 	const {
 		t,
 		data,
@@ -18,11 +18,12 @@ const FilterComponent = ({ onClick }: FilterComponentProps) => {
 		setIsOpen,
 		toggleOption,
 		handleSubmit,
-		handleReset
+		handleReset,
+		handleConfirmApply
 	} = useFilterLogic()
 
 	return (
-		<div className="rounded-[16px] bg-white shadow-md max-h-[80vh] flex flex-col">
+		<div className="rounded-[16px]shadow-md max-h-[80vh] flex flex-col">
 			<form
 				onSubmit={handleSubmit}
 				onReset={handleReset}
@@ -55,13 +56,10 @@ const FilterComponent = ({ onClick }: FilterComponentProps) => {
 
 			{isOpen && (
 				<ApplyModal
-					dataFilters={draftFilters}
-					onClick={onClick}
+					onClick={handleConfirmApply}
 					setIsOpen={setIsOpen}
 				/>
 			)}
 		</div>
 	)
 }
-
-export default FilterComponent

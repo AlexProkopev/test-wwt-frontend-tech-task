@@ -4,10 +4,10 @@ import { TFunction } from 'i18next'
 
 import { SearchRequestFilter } from '@/shared/api/types/SearchRequest/SearchRequestFilter'
 
-import ButtonModalOpen from '../../components/ButtonOpenModal/ButtonModalOpen'
-import ConfirmedFiltersList from '../../components/ConfirmedFiltersList/ConfirmedFiltersList'
-import LanguageToggle from '../../components/LanguageToggle/LanguageToggle'
-import TravelQuote from '../../components/TravelQuote/TravelQuote'
+import { ButtonModalOpen } from '../ButtonOpenModal/ButtonModalOpen'
+import { ConfirmedFiltersList } from '../ConfirmedFiltersList/ConfirmedFiltersList'
+import { LanguageToggle } from '../LanguageToggle/LanguageToggle'
+import { TravelQuote } from '../TravelQuote/TravelQuote'
 
 interface SectionFiltersProps {
 	currentLang: string
@@ -17,7 +17,7 @@ interface SectionFiltersProps {
 	onClick: () => void
 }
 
-const SectionFilters: React.FC<SectionFiltersProps> = ({
+export const SectionFilters: React.FC<SectionFiltersProps> = ({
 	currentLang,
 	toggleLanguage,
 	confirmedFilters,
@@ -45,5 +45,3 @@ const SectionFilters: React.FC<SectionFiltersProps> = ({
 		</section>
 	)
 }
-
-export default SectionFilters

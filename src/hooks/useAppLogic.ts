@@ -9,7 +9,7 @@ import { useFilterStore } from '../store/filterStore'
 
 export const useAppLogic = () => {
 	const { t, i18n } = useTranslation()
-	const { isOpen, onClick } = useModal()
+	const { isOpen, onClick} = useModal()
 	const { confirmedFilters } = useFilterStore()
 
 	const toggleLanguage = () => {

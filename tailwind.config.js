@@ -3,8 +3,18 @@ export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
-			backdropBlur: {
-				25: '25px'
+			
+			fontSize: {
+				'custom-24': [
+					'24px',
+					{
+						lineHeight: '100%',
+						letterSpacing: '0%'
+					}
+				]
+			},
+			fontWeight: {
+				medium: '500'
 			}
 		}
 	},

@@ -1,6 +1,9 @@
+// ConfirmedFiltersList.tsx
 import React from 'react'
 
 import { TFunction } from 'i18next'
+import { FilterItem } from './fields/FilterItem'
+
 
 interface Filter {
 	id: string
@@ -12,25 +15,26 @@ interface ConfirmedFiltersListProps {
 	t: TFunction
 }
 
-const ConfirmedFiltersList: React.FC<ConfirmedFiltersListProps> = ({
+export const ConfirmedFiltersList: React.FC<ConfirmedFiltersListProps> = ({
 	filters,
 	t
-}) => (
-	<div>
-		<h2>{t('titlePage')}</h2>
-		<ul>
-			{filters.map(filter => (
-				<li key={filter.id}>
-					<h3>{t(`filters.${filter.id}`)}</h3>
-					<ul>
-						{filter.optionsIds.map(optionId => (
-							<li key={optionId}>{t(`filters.${optionId}`)}</li>
-						))}
-					</ul>
-				</li>
-			))}
-		</ul>
-	</div>
-)
-
-export default ConfirmedFiltersList
+}) => {
+	if (filters.length === 0) {
+		return null
+	}
+	return (
+		<div className="mb-5">
+			<h2 className="font-medium">{t('titlePage')}:</h2>
+			<ul >
+				{filters.map((filter, index) => (
+					<FilterItem
+						key={filter.id}
+						filter={filter}
+						index={index}
+						t={t}
+					/>
+				))}
+			</ul>
+		</div>
+	)
+}

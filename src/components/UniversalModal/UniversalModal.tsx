@@ -1,24 +1,32 @@
-import { ReactElement } from 'react'
+import { ReactNode } from 'react'
+
+import { motion } from 'framer-motion'
 
 interface UniversalModalProps {
-	children: ReactElement
+	children: ReactNode
 	onClose: () => void
 }
 
-const UniversalModal = ({ children, onClose }: UniversalModalProps) => {
+export const UniversalModal = ({ children, onClose }: UniversalModalProps) => {
 	return (
-		<div
+		<motion.div
 			onClick={onClose}
-			className="  fixed top-0 left-0 w-full h-full  bg-zinc-900/30 backdrop-blur-md"
+			className="fixed inset-0 bg-zinc-900/30 backdrop-blur-md z-50 flex justify-center items-center p-4"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.3 }}
 		>
-			<div
-				className="w-[1280px] relative mx-auto mt-[80px]"
+			<motion.div
+				className="bg-white rounded-2xl max-w-[1280px] w-full p-8 relative"
 				onClick={e => e.stopPropagation()}
+				initial={{ opacity: 0, scale: 0.95, y: -20 }}
+				animate={{ opacity: 1, scale: 1, y: 0 }}
+				exit={{ opacity: 0, scale: 0.95, y: -20 }}
+				transition={{ type: 'spring', stiffness: 300, damping: 30 }}
 			>
 				{children}
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	)
 }
-
-export default UniversalModal
