@@ -23,13 +23,10 @@
 		"framer-motion": "^12.23.12",
 		"i18next": "^23.16.8",
 		"immer": "^10.1.1",
-		"motion": "^12.23.12",
 		"notiflix": "^3.2.8",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-i18next": "^13.5.0",
-		"react-router": "^6.30.0",
-		"react-router-dom": "^6.30.0",
 		"tailwindcss-filters": "^3.0.0",
 		"vite-tsconfig-paths": "^4.3.2",
 		"zustand": "^5.0.3"
