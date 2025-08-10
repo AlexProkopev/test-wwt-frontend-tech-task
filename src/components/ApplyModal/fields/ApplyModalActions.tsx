@@ -11,7 +11,7 @@ export const ApplyModalActions = ({
 }: ApplyModalActionsProps) => {
 	const { t } = useTranslation()
 	return (
-		<div className="flex flex-col md:justify-center gap-[15px] mt-[60px] md:mt-[120px] md:gap-[32px] md:flex-row">
+		<div className="flex flex-col gap-[15px] mt-[60px]   md:justify-center md:mt-[120px] md:gap-[32px] md:flex-row">
 			<button
 				onClick={onCancel}
 				className=" p-[5px] rounded-2xl outline-2 outline-offset-[-2px] outline-zinc-400 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out hover:cursor-pointer md:px-[90px] md:py-[26px]"

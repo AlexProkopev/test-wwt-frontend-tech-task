@@ -1,9 +1,8 @@
-// ConfirmedFiltersList.tsx
 import React from 'react'
 
 import { TFunction } from 'i18next'
-import { FilterItem } from './fields/FilterItem'
 
+import { FilterItem } from './fields/FilterItem'
 
 interface Filter {
 	id: string

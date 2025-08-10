@@ -1,6 +1,11 @@
 export const resources = {
 	en: {
 		translation: {
+			languages: {
+				en: 'English',
+				ru: 'Русский',
+				ua: 'Українська'
+			},
 			titlePage: 'Selected filters',
 			type: 'Type',
 			travelQuote: 'Travel not to escape life, but so life doesn’t escape you.',
@@ -48,6 +53,11 @@ export const resources = {
 	},
 	ru: {
 		translation: {
+			languages: {
+				en: 'English',
+				ru: 'Русский',
+				ua: 'Українська'
+			},
 			titlePage: 'Выбранные фильтры',
 			type: 'Тип',
 			travelQuote:
@@ -92,7 +102,60 @@ export const resources = {
 			useOldFilters: 'Использовать старые фильтры',
 			applyNewFilter: 'Вы хотите применить новый фильтр?',
 			noFiltersSelected: 'Нет выбранных фильтров'
+		}
+	},
 
+	ua: {
+		translation: {
+			languages: {
+				en: 'English',
+				ru: 'Русский',
+				ua: 'Українська'
+			},
+			titlePage: 'Обрані фільтри',
+			type: 'Тип',
+			travelQuote:
+				'Подорожуйте не щоб втекти від життя, а щоб життя не втекло від вас.',
+			filters: {
+				MEAL_OPTIONS: 'Параметри харчування',
+				RULES_POLICIES_PAYMENT: 'Правила, умови та оплата',
+				FACILITIES: 'Зручності',
+				BED_TYPE: 'Тип ліжка',
+				HEALTH_ENTERTAINMENT_SPORTS: "Здоров'я, розваги та спорт",
+
+				breakfast: 'Сніданок включено',
+				lunch: 'Обід включено',
+				dinner: 'Вечеря включена',
+				'all-inclusive': 'Все включено',
+
+				'free-cancellation': 'Безкоштовне скасування',
+				'pets-allowed': 'Дозволено з тваринами',
+				'non-smoking-room': 'Номер для некурців',
+
+				'private-bathroom': 'Власна ванна кімната',
+				'air-conditioning': 'Кондиціонер',
+				heating: 'Опалення',
+				'coffee-tea-maker': 'Кавоварка/чайник',
+				'shuttle-service': 'Трансфер',
+				'wi-fi': 'Wi-Fi',
+				parking: 'Паркування',
+				pool: 'Басейн',
+
+				'twin-beds': 'Дві односпальні ліжка',
+				'double-bed': 'Двоспальне ліжко',
+
+				gym: 'Тренажерний зал',
+				spa: 'СПА',
+				sauna: 'Сауна'
+			},
+			welcomeMessage: 'Ласкаво просимо до нашого додатку',
+			openFilters: 'Відкрити фільтри',
+			filterTitle: 'Фільтр',
+			submitButtonText: 'Застосувати',
+			clearAllParams: 'Очистити всі параметри',
+			useOldFilters: 'Використовувати старі фільтри',
+			applyNewFilter: 'Ви хочете застосувати новий фільтр?',
+			noFiltersSelected: 'Фільтри не вибрано'
 		}
 	}
 } as const

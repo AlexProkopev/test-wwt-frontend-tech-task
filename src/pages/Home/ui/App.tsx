@@ -7,13 +7,11 @@ import { SectionFilters } from '../../../components/SectionFilters/SectionFilter
 import { UniversalModal } from '../../../components/UniversalModal/UniversalModal'
 
 export const App = () => {
-	const { t, i18n, onClick, confirmedFilters, toggleLanguage, isOpen } =
-		useAppLogic()
+	const { t, onClick, confirmedFilters, toggleLanguage, isOpen } = useAppLogic()
 
 	return (
 		<>
 			<SectionFilters
-				currentLang={i18n.language}
 				toggleLanguage={toggleLanguage}
 				confirmedFilters={confirmedFilters}
 				t={t}

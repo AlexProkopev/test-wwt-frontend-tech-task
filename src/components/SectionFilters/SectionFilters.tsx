@@ -10,15 +10,13 @@ import { LanguageToggle } from '../LanguageToggle/LanguageToggle'
 import { TravelQuote } from '../TravelQuote/TravelQuote'
 
 interface SectionFiltersProps {
-	currentLang: string
-	toggleLanguage: () => void
+	toggleLanguage: (lang: 'en' | 'ru' | 'ua') => void
 	confirmedFilters: SearchRequestFilter
 	t: TFunction
 	onClick: () => void
 }
 
 export const SectionFilters: React.FC<SectionFiltersProps> = ({
-	currentLang,
 	toggleLanguage,
 	confirmedFilters,
 	t,
@@ -26,10 +24,7 @@ export const SectionFilters: React.FC<SectionFiltersProps> = ({
 }) => {
 	return (
 		<section className="min-h-screen bg-white flex flex-col items-center justify-center p-8 text-rgba(49, 57, 60, 1)">
-			<LanguageToggle
-				currentLang={currentLang}
-				onToggle={toggleLanguage}
-			/>
+			<LanguageToggle onToggle={toggleLanguage} />
 
 			<ConfirmedFiltersList
 				filters={confirmedFilters}
