@@ -41,7 +41,9 @@ const FilterGroup: React.FC<FilterGroupProps> = ({
 								onChange={() => toggleOption(group.id, option.id)}
 								className="w-5 h-5"
 							/>
-							<p className="text-base font-normal">{t(`filters.${option.id}`, option.name)}</p>
+							<p className="text-base font-normal">
+								{t(`filters.${option.id}`, option.name)}
+							</p>
 						</label>
 					))}
 				</div>

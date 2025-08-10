@@ -66,7 +66,7 @@ module.exports = {
 		camelcase: 'error',
 		'id-length': [
 			'error',
-			{ exceptions: ['_', 'w', 'h', 'e', 'i', 'j', 'k', 'p', 'm', 't','y'] }
+			{ exceptions: ['_', 'w', 'h', 'e', 'i', 'j', 'k', 'p', 'm', 't', 'y'] }
 		],
 		eqeqeq: ['error', 'smart'],
 		'dot-notation': 'error',
