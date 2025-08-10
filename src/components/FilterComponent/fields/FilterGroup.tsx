@@ -23,15 +23,15 @@ const FilterGroup: React.FC<FilterGroupProps> = ({
 
 	return (
 		<div className="mt-[64px]">
-			<h3 className="text-2xl font-medium mb-[24px]">
+			<h3 className="text-base mb-[12px] font-bold md:text-2xl md:font-medium md:mb-[24px]">
 				{t(`filters.${group.id}`)}
 			</h3>
 			{group.type === 'OPTION' && group.options && (
-				<div className="grid grid-cols-3 gap-[16px]">
+				<div className="grid grid-cols-1 gap-[10px] md:grid-cols-3 md:gap-[16px]">
 					{group.options.map(option => (
 						<label
 							key={option.id}
-							className="flex items-center gap-[16px] cursor-pointer"
+							className="flex items-center gap-[10px] cursor-pointer md:gap-[16px]"
 						>
 							<input
 								type="checkbox"
@@ -41,7 +41,7 @@ const FilterGroup: React.FC<FilterGroupProps> = ({
 								onChange={() => toggleOption(group.id, option.id)}
 								className="w-5 h-5"
 							/>
-							<p className="">{t(`filters.${option.id}`, option.name)}</p>
+							<p className="text-base font-normal">{t(`filters.${option.id}`, option.name)}</p>
 						</label>
 					))}
 				</div>

@@ -11,18 +11,15 @@ export const resources = {
 				BED_TYPE: 'Bed type',
 				HEALTH_ENTERTAINMENT_SPORTS: 'Health, Entertainment, and Sports',
 
-				// MEAL_OPTIONS options
 				breakfast: 'Breakfast included',
 				lunch: 'Lunch included',
 				dinner: 'Dinner included',
 				'all-inclusive': 'All inclusive',
 
-				// RULES_POLICIES_PAYMENT options
 				'free-cancellation': 'Free cancellation',
 				'pets-allowed': 'Pets allowed',
 				'non-smoking-room': 'Non-Smoking room',
 
-				// FACILITIES options
 				'private-bathroom': 'Private bathroom',
 				'air-conditioning': 'Air conditioning',
 				heating: 'Heating',
@@ -32,11 +29,9 @@ export const resources = {
 				parking: 'Parking',
 				pool: 'Pool',
 
-				// BED_TYPE options
 				'twin-beds': 'Twin beds',
 				'double-bed': 'Double Bed',
 
-				// HEALTH_ENTERTAINMENT_SPORTS options
 				gym: 'Gym',
 				spa: 'Spa',
 				sauna: 'Sauna'
@@ -47,7 +42,8 @@ export const resources = {
 			submitButtonText: 'Apply',
 			clearAllParams: 'Clear all parameters',
 			useOldFilters: 'Use old filters',
-			applyNewFilter: 'Do you want to apply new filter?'
+			applyNewFilter: 'Do you want to apply new filter?',
+			noFiltersSelected: 'No filters selected'
 		}
 	},
 	ru: {
@@ -63,18 +59,15 @@ export const resources = {
 				BED_TYPE: 'Тип кровати',
 				HEALTH_ENTERTAINMENT_SPORTS: 'Здоровье, развлечения и спорт',
 
-				// MEAL_OPTIONS options
 				breakfast: 'Завтрак включен',
 				lunch: 'Обед включен',
 				dinner: 'Ужин включен',
 				'all-inclusive': 'Все включено',
 
-				// RULES_POLICIES_PAYMENT options
 				'free-cancellation': 'Бесплатная отмена',
 				'pets-allowed': 'Разрешено с животными',
 				'non-smoking-room': 'Номер для некурящих',
 
-				// FACILITIES options
 				'private-bathroom': 'Собственная ванная',
 				'air-conditioning': 'Кондиционер',
 				heating: 'Отопление',
@@ -84,11 +77,9 @@ export const resources = {
 				parking: 'Парковка',
 				pool: 'Бассейн',
 
-				// BED_TYPE options
 				'twin-beds': 'Две односпальные кровати',
 				'double-bed': 'Двуспальная кровать',
 
-				// HEALTH_ENTERTAINMENT_SPORTS options
 				gym: 'Тренажёрный зал',
 				spa: 'СПА',
 				sauna: 'Сауна'
@@ -99,7 +90,9 @@ export const resources = {
 			submitButtonText: 'Применить',
 			clearAllParams: 'Очистить все параметры',
 			useOldFilters: 'Использовать старые фильтры',
-			applyNewFilter: 'Вы хотите применить новый фильтр?'
+			applyNewFilter: 'Вы хотите применить новый фильтр?',
+			noFiltersSelected: 'Нет выбранных фильтров'
+
 		}
 	}
 } as const

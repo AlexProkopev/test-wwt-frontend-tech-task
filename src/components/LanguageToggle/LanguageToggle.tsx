@@ -12,7 +12,7 @@ export const LanguageToggle: React.FC<LanguageToggleProps> = ({
 	return (
 		<button
 			onClick={onToggle}
-			className="mb-6 px-4 py-2 border rounded hover:bg-gray-200 hover:transition-colors hover:cursor-pointer"
+			className="font-[10px] text-base mb-4 px-2 py-1 border rounded md:mb-6 md:px-4 md:py-2 md:text-lg lg:text-xl hover:bg-gray-200 hover:transition-colors hover:cursor-pointer"
 		>
 			{currentLang === 'en' ? 'Русский' : 'English'}
 		</button>

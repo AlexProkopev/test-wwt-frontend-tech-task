@@ -12,13 +12,13 @@ interface FilterHeaderProps {
 
 const FilterHeader: React.FC<FilterHeaderProps> = ({ title, onClose, t }) => (
 	<div className="relative">
-		<h2 className="text-center text-neutral-700 text-4xl font-medium">
+		<h2 className=" text-neutral-700 text-base md:text-2xl md:text-center xl:text-4xl xl:font-medium">
 			{title}
 		</h2>
 		<button
 			onClick={onClose}
 			type="button"
-			className="absolute top-[9px] right-5"
+			className="absolute top-[3px] right-[12px] md:top-[9px] md:right-5 hover:scale-125 transition-transform duration-300 cursor-pointer"
 			aria-label={t('close')}
 		>
 			<SvgClose />

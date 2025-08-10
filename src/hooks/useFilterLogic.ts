@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Notiflix from 'notiflix';
 
 import { FilterItem, FilterType } from '@/shared/api/types/Filter'
 import { SearchRequestFilter } from '@/shared/api/types/SearchRequest/SearchRequestFilter'
@@ -47,6 +48,11 @@ export const useFilterLogic = () => {
 		
 		if (draftFilters.length > 0) {
 			setIsOpen(true)
+		} else {
+			Notiflix.Notify.failure(t('noFiltersSelected'), {
+				position: 'center-center',
+				timeout: 3000,
+			})
 		}
 	}
 

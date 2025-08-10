@@ -14,17 +14,17 @@ const FilterControls: React.FC<FilterControlsProps> = ({
 	onReset,
 	t
 }) => (
-	<div className="flex justify-center relative mt-[64px]">
+	<div className="flex justify-start md:justify-center relative mt-[64px]">
 		<button
 			type="button"
-			className="px-16 py-6 bg-orange-600 rounded-2xl  text-white  font-semibold hover:cursor-pointer hover:bg-orange-700 hover:transition-background hover:ease-in-out hover:duration-300"
+			className="px-8 py-2 font-semibold   text-white  rounded-2xl  bg-orange-600 hover:cursor-pointer hover:bg-orange-700 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out md:px-16 md:py-6 md:font-semibold "
 			onClick={onSubmit}
 		>
 			{t('submitButtonText')}
 		</button>
 		<button
 			type="reset"
-			className="absolute top-[25px] right-[15px] text-teal-600 font-medium  underline hover:cursor-pointer hover:text-teal-700 hover:transition-colors hover:ease-in-out hover:duration-300"
+			className="md:absolute md:top-[25px] md:right-[15px] text-teal-600 font-medium  underline hover:cursor-pointer hover:text-teal-700 transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out"
 			onClick={onReset}
 		>
 			{t('clearAllParams')}

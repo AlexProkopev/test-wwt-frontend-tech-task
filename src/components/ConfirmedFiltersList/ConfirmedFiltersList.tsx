@@ -24,8 +24,8 @@ export const ConfirmedFiltersList: React.FC<ConfirmedFiltersListProps> = ({
 	}
 	return (
 		<div className="mb-5">
-			<h2 className="font-medium">{t('titlePage')}:</h2>
-			<ul >
+			<h2 className="text-base md:text-lg lg:text-xl">{t('titlePage')}:</h2>
+			<ul>
 				{filters.map((filter, index) => (
 					<FilterItem
 						key={filter.id}
