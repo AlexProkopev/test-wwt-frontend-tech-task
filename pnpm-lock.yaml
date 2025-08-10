@@ -8,39 +8,45 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/inter':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@tanstack/react-query':
         specifier: ^5.74.3
-        version: 5.74.3(react@19.1.0)
+        version: 5.74.3(react@18.3.1)
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
+      framer-motion:
+        specifier: ^12.23.12
+        version: 12.23.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       i18next:
         specifier: ^23.16.8
         version: 23.16.8
       immer:
         specifier: ^10.1.1
         version: 10.1.1
+      notiflix:
+        specifier: ^3.2.8
+        version: 3.2.8
       react:
-        specifier: ^19.1.0
-        version: 19.1.0
+        specifier: ^18.3.1
+        version: 18.3.1
       react-dom:
-        specifier: ^19.1.0
-        version: 19.1.0(react@19.1.0)
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
       react-i18next:
         specifier: ^13.5.0
-        version: 13.5.0(i18next@23.16.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react-router:
-        specifier: ^6.30.0
-        version: 6.30.0(react@19.1.0)
-      react-router-dom:
-        specifier: ^6.30.0
-        version: 6.30.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 13.5.0(i18next@23.16.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      tailwindcss-filters:
+        specifier: ^3.0.0
+        version: 3.0.0
       vite-tsconfig-paths:
         specifier: ^4.3.2
         version: 4.3.2(typescript@5.8.3)(vite@6.2.6(@types/node@20.17.30)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.1))
       zustand:
         specifier: ^5.0.3
-        version: 5.0.3(@types/react@19.1.1)(immer@10.1.1)(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0))
+        version: 5.0.3(@types/react@19.1.1)(immer@10.1.1)(react@18.3.1)(use-sync-external-store@1.5.0(react@18.3.1))
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.1.3
@@ -53,7 +59,7 @@ importers:
         version: 6.6.3
       '@testing-library/react':
         specifier: ^14.3.1
-        version: 14.3.1(@types/react@19.1.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 14.3.1(@types/react@19.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^4.3.0
         version: 4.3.0(prettier@3.5.3)
@@ -78,6 +84,9 @@ importers:
       '@vitest/coverage-istanbul':
         specifier: ^1.6.1
         version: 1.6.1(vitest@1.6.1(@types/node@20.17.30)(jsdom@23.2.0)(lightningcss@1.29.2))
+      autoprefixer:
+        specifier: ^10.4.21
+        version: 10.4.21(postcss@8.5.6)
       eslint:
         specifier: ^8.57.1
         version: 8.57.1
@@ -111,12 +120,15 @@ importers:
       lint-staged:
         specifier: ^15.5.1
         version: 15.5.1
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
       tailwindcss:
-        specifier: ^4.1.3
-        version: 4.1.3
+        specifier: ^4.1.11
+        version: 4.1.11
       tw-animate-css:
         specifier: ^1.2.5
         version: 1.2.5
@@ -577,6 +589,9 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@fontsource/inter@5.2.6':
+    resolution: {integrity: sha512-CZs9S1CrjD0jPwsNy9W6j0BhsmRSQrgwlTNkgQXTsAeDRM42LBRLo3eo9gCzfH4GvV7zpyf78Ozfl773826csw==}
+
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
     engines: {node: '>=10.10.0'}
@@ -631,10 +646,6 @@ packages:
   '@pkgr/core@0.2.3':
     resolution: {integrity: sha512-yMV8bb9prWI21N6FsrnPCbhoYb8UUvYCDGoSvPHBloVC095Ef2ker43hzXkJ6TpJPw53S8FeFYkARa7GGIGwxg==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
-
-  '@remix-run/router@1.23.0':
-    resolution: {integrity: sha512-O3rHJzAQKamUz1fvE0Qaw0xSFqsA/yafi2iqeE0pvdFtCO1viYx8QL6f3Ln/aCCTLxs68SLf0KPM9eSeM8yBnA==}
-    engines: {node: '>=14.0.0'}
 
   '@rollup/pluginutils@5.1.4':
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
@@ -1242,6 +1253,13 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
+  autoprefixer@10.4.21:
+    resolution: {integrity: sha512-O+A6LWV5LDHSJD3LjHYoNi4VLsj/Whi7k6zG12xTYaU4cQ8oxQGckXNX8cRHK5yOZ/ppVHe0ZBXGzSV9jXdVbQ==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
@@ -1679,6 +1697,23 @@ packages:
   form-data@4.0.2:
     resolution: {integrity: sha512-hGfm/slu0ZabnNt4oaRZ6uREyfCj6P4fT/n6A1rGV+Z0VdGXjfOhVUpkn6qVQONHGIFwmveGXyDs75+nr6FM8w==}
     engines: {node: '>= 6'}
+
+  fraction.js@4.3.7:
+    resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
+
+  framer-motion@12.23.12:
+    resolution: {integrity: sha512-6e78rdVtnBvlEVgu6eFEAgG9v3wLnYEboM8I5O5EXvfKC8gxGQB8wXJdhkMy10iVcn05jl6CNw7/HTsTCfwcWg==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -2253,6 +2288,12 @@ packages:
   mlly@1.7.4:
     resolution: {integrity: sha512-qmdSIPC4bDJXgZTCR7XosJiNKySV7O215tsPtDN9iEO/7q/76b/ijtgRu/+epFXSJhijtTCCGp3DWS549P3xKw==}
 
+  motion-dom@12.23.12:
+    resolution: {integrity: sha512-RcR4fvMCTESQBD/uKQe49D5RUeDOokkGRmz4ceaJKDBgHYtZtntC/s2vLvY38gqGaytinij/yi3hMcWVcEF5Kw==}
+
+  motion-utils@12.23.6:
+    resolution: {integrity: sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==}
+
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -2269,6 +2310,13 @@ packages:
 
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
+
+  normalize-range@0.1.2:
+    resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
+    engines: {node: '>=0.10.0'}
+
+  notiflix@3.2.8:
+    resolution: {integrity: sha512-BNBGr3qNIBNt6NZYvch0OLF9DEEgWKcjYzISMH9eECKwfsUaINb5K/RA21hy5kmfOtdbdAdODrqxts+0xp+xwA==}
 
   npm-run-path@5.3.0:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
@@ -2403,8 +2451,11 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
-  postcss@8.5.3:
-    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
+  postcss-value-parser@4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+
+  postcss@8.5.6:
+    resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -2444,10 +2495,10 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  react-dom@19.1.0:
-    resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
+  react-dom@18.3.1:
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
-      react: ^19.1.0
+      react: ^18.3.1
 
   react-i18next@13.5.0:
     resolution: {integrity: sha512-CFJ5NDGJ2MUyBohEHxljOq/39NQ972rh1ajnadG9BjTk+UXbHLq4z5DKEbEQBDoIhUmmbuS/fIMJKo6VOax1HA==}
@@ -2471,21 +2522,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-router-dom@6.30.0:
-    resolution: {integrity: sha512-x30B78HV5tFk8ex0ITwzC9TTZMua4jGyA9IUlH1JLQYQTFyxr/ZxwOJq7evg1JX1qGVUcvhsmQSKdPncQrjTgA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-
-  react-router@6.30.0:
-    resolution: {integrity: sha512-D3X8FyH9nBcTSHGdEKurK7r8OYE1kKFn3d/CF+CoxbSHkxU7o37+Uh7eAHRXr6k2tSExXYO++07PeXJtA/dEhQ==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      react: '>=16.8'
-
-  react@19.1.0:
-    resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
+  react@18.3.1:
+    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
 
   redent@3.0.0:
@@ -2571,8 +2609,8 @@ packages:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
 
-  scheduler@0.26.0:
-    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
+  scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -2726,6 +2764,13 @@ packages:
   synckit@0.11.4:
     resolution: {integrity: sha512-Q/XQKRaJiLiFIBNN+mndW7S/RHxvwzuZS6ZwmRzUBqJBv/5QIKCEwkBC8GBf8EQJKYnaFs0wOZbKTXBPj8L9oQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
+
+  tailwindcss-filters@3.0.0:
+    resolution: {integrity: sha512-xhortqs8fSp9id17EnneYhmruA5DfU6K0zvN6/mgDlEXKaHthjXlR74Ta+4lrX5Lp7tp6YigB09WO0TOWn7VEQ==}
+    deprecated: Use Tailwind's filter utilities
+
+  tailwindcss@4.1.11:
+    resolution: {integrity: sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==}
 
   tailwindcss@4.1.3:
     resolution: {integrity: sha512-2Q+rw9vy1WFXu5cIxlvsabCwhU2qUwodGq03ODhLJ0jW4ek5BUtoCsnLB0qG+m8AHgEsSJcJGDSDe06FXlP74g==}
@@ -3443,6 +3488,8 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
+  '@fontsource/inter@5.2.6': {}
+
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -3491,8 +3538,6 @@ snapshots:
       fastq: 1.19.1
 
   '@pkgr/core@0.2.3': {}
-
-  '@remix-run/router@1.23.0': {}
 
   '@rollup/pluginutils@5.1.4(rollup@4.40.0)':
     dependencies:
@@ -3757,10 +3802,10 @@ snapshots:
 
   '@tanstack/query-core@5.74.3': {}
 
-  '@tanstack/react-query@5.74.3(react@19.1.0)':
+  '@tanstack/react-query@5.74.3(react@18.3.1)':
     dependencies:
       '@tanstack/query-core': 5.74.3
-      react: 19.1.0
+      react: 18.3.1
 
   '@testing-library/dom@9.3.4':
     dependencies:
@@ -3783,13 +3828,13 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/react@14.3.1(@types/react@19.1.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@testing-library/react@14.3.1(@types/react@19.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.27.0
       '@testing-library/dom': 9.3.4
       '@types/react-dom': 18.3.6(@types/react@19.1.1)
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
 
@@ -4110,6 +4155,16 @@ snapshots:
   async-function@1.0.0: {}
 
   asynckit@0.4.0: {}
+
+  autoprefixer@10.4.21(postcss@8.5.6):
+    dependencies:
+      browserslist: 4.24.4
+      caniuse-lite: 1.0.30001713
+      fraction.js: 4.3.7
+      normalize-range: 0.1.2
+      picocolors: 1.1.1
+      postcss: 8.5.6
+      postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -4734,6 +4789,17 @@ snapshots:
       es-set-tostringtag: 2.1.0
       mime-types: 2.1.35
 
+  fraction.js@4.3.7: {}
+
+  framer-motion@12.23.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      motion-dom: 12.23.12
+      motion-utils: 12.23.6
+      tslib: 2.8.1
+    optionalDependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -5323,6 +5389,12 @@ snapshots:
       pkg-types: 1.3.1
       ufo: 1.6.1
 
+  motion-dom@12.23.12:
+    dependencies:
+      motion-utils: 12.23.6
+
+  motion-utils@12.23.6: {}
+
   ms@2.1.3: {}
 
   nanoid@3.3.11: {}
@@ -5335,6 +5407,10 @@ snapshots:
       tslib: 2.8.1
 
   node-releases@2.0.19: {}
+
+  normalize-range@0.1.2: {}
+
+  notiflix@3.2.8: {}
 
   npm-run-path@5.3.0:
     dependencies:
@@ -5469,7 +5545,9 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss@8.5.3:
+  postcss-value-parser@4.2.0: {}
+
+  postcss@8.5.6:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -5511,19 +5589,20 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-dom@19.1.0(react@19.1.0):
+  react-dom@18.3.1(react@18.3.1):
     dependencies:
-      react: 19.1.0
-      scheduler: 0.26.0
+      loose-envify: 1.4.0
+      react: 18.3.1
+      scheduler: 0.23.2
 
-  react-i18next@13.5.0(i18next@23.16.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-i18next@13.5.0(i18next@23.16.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.27.0
       html-parse-stringify: 3.0.1
       i18next: 23.16.8
-      react: 19.1.0
+      react: 18.3.1
     optionalDependencies:
-      react-dom: 19.1.0(react@19.1.0)
+      react-dom: 18.3.1(react@18.3.1)
 
   react-is@16.13.1: {}
 
@@ -5531,19 +5610,9 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-router-dom@6.30.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react@18.3.1:
     dependencies:
-      '@remix-run/router': 1.23.0
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
-      react-router: 6.30.0(react@19.1.0)
-
-  react-router@6.30.0(react@19.1.0):
-    dependencies:
-      '@remix-run/router': 1.23.0
-      react: 19.1.0
-
-  react@19.1.0: {}
+      loose-envify: 1.4.0
 
   redent@3.0.0:
     dependencies:
@@ -5658,7 +5727,9 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
-  scheduler@0.26.0: {}
+  scheduler@0.23.2:
+    dependencies:
+      loose-envify: 1.4.0
 
   semver@6.3.1: {}
 
@@ -5841,6 +5912,12 @@ snapshots:
       '@pkgr/core': 0.2.3
       tslib: 2.8.1
 
+  tailwindcss-filters@3.0.0:
+    dependencies:
+      lodash: 4.17.21
+
+  tailwindcss@4.1.11: {}
+
   tailwindcss@4.1.3: {}
 
   tapable@2.2.1: {}
@@ -5963,9 +6040,9 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
-  use-sync-external-store@1.5.0(react@19.1.0):
+  use-sync-external-store@1.5.0(react@18.3.1):
     dependencies:
-      react: 19.1.0
+      react: 18.3.1
     optional: true
 
   vite-node@1.6.1(@types/node@20.17.30)(lightningcss@1.29.2):
@@ -6011,7 +6088,7 @@ snapshots:
   vite@5.4.18(@types/node@20.17.30)(lightningcss@1.29.2):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.5.3
+      postcss: 8.5.6
       rollup: 4.40.0
     optionalDependencies:
       '@types/node': 20.17.30
@@ -6021,7 +6098,7 @@ snapshots:
   vite@6.2.6(@types/node@20.17.30)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.1):
     dependencies:
       esbuild: 0.25.2
-      postcss: 8.5.3
+      postcss: 8.5.6
       rollup: 4.40.0
     optionalDependencies:
       '@types/node': 20.17.30
@@ -6158,9 +6235,9 @@ snapshots:
 
   yocto-queue@1.2.1: {}
 
-  zustand@5.0.3(@types/react@19.1.1)(immer@10.1.1)(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0)):
+  zustand@5.0.3(@types/react@19.1.1)(immer@10.1.1)(react@18.3.1)(use-sync-external-store@1.5.0(react@18.3.1)):
     optionalDependencies:
       '@types/react': 19.1.1
       immer: 10.1.1
-      react: 19.1.0
-      use-sync-external-store: 1.5.0(react@19.1.0)
+      react: 18.3.1
+      use-sync-external-store: 1.5.0(react@18.3.1)
